@@ -1,0 +1,11 @@
+.overlay-open {
+    rotate: 90deg;
+    /* transform: translateX(100vw); */
+    transform: translateX(-100%);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    height: 100vw;
+}
