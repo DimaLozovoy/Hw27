@@ -1,11 +1,108 @@
-.overlay-open {
+body {
+    font-family: Roboto;
+  }
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.list {
+  list-style: none;
+  padding: 0;
+}
+.link {
+  text-decoration: none;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+button {
+    background-color: rgba(60, 52, 52, 0.511);
     rotate: 90deg;
-    /* transform: translateX(100vw); */
-    transform: translateX(-100%);
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wrapper-btn-menu {
     font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
-    height: 100vw;
+    height: 100vh;
+    transform: translateX(-49%);
 }
+.overlay-list {
+    position:absolute; top:0; left:0;
+
+    /* transform: translateX(-100%); */
+
+    background-color: rgba(60, 52, 52, 0.511);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    list-style-type: none;
+    font-size: 20px;
+    gap: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.overlay-cell {
+  position: relative;
+}
+.overlay-link {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: flex-end;
+}
+  .current::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: orange;
+      border: 3px solid black;
+      transform: rotate(45deg);
+      display: flex;
+      margin: 2px;
+      position: relative;
+      bottom: 0 ; top: 0;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+    }
+    
+
+/* /* button:hover .overlay-list {
+    transform: translateX(0%)
+} */
