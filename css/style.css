@@ -39,7 +39,7 @@ img {
   overflow: hidden;
 }
 
-button {
+.open-btn {
     background-color: rgba(60, 52, 52, 0.511);
     rotate: 90deg;
     width: 100vh;
@@ -63,14 +63,13 @@ button {
 .overlay-list {
     position:absolute; top:0; left:0;
 
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
 
     background-color: rgba(60, 52, 52, 0.511);
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     list-style-type: none;
     font-size: 20px;
     gap: 15px;
@@ -82,6 +81,8 @@ button {
 }
 .overlay-link {
     display: flex;
+    align-items: center;
+    gap: 10px;
     color: white;
     text-decoration: none;
 }
@@ -94,8 +95,6 @@ button {
       transform: rotate(45deg);
       display: inline-block;
     }
-    
-
-/* /* button:hover .overlay-list {
-    transform: translateX(0%)
-} */
+    .wrapper-btn-menu:hover .overlay-list {
+  transform: translateX(0%);
+}
