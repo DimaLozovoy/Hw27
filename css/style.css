@@ -59,10 +59,13 @@ img {
     align-items: center;
     height: 100vh;
     transform: translateX(-49%);
+    /* transform: translateX(-39%); */
+    z-index: 2;
 }
 .overlay-list {
     position:absolute; top:0; left:0;
 
+    /* transform: translateX(0%); */
     transform: translateX(-100%);
 
     background-color: rgba(60, 52, 52, 0.511);
@@ -75,6 +78,8 @@ img {
     gap: 15px;
     padding-left: 40px;
     padding-right: 40px;
+    z-index: 1;
+    transition: 0.5s;
 }
 .overlay-cell {
   position: relative;
@@ -95,6 +100,9 @@ img {
       transform: rotate(45deg);
       display: inline-block;
     }
-    .wrapper-btn-menu:hover .overlay-list {
+    .overlay-link:hover .overlay-link:focus {
+      color: orange;
+    } 
+    .open-btn:hover .overlay-list, .open-btn:focus .overlay-list {
   transform: translateX(0%);
 }
