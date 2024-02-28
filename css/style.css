@@ -40,7 +40,7 @@ img {
 }
 
 .open-btn {
-    background-color: rgba(60, 52, 52, 0.511);
+
     rotate: 90deg;
     width: 100vh;
     display: flex;
@@ -50,6 +50,8 @@ img {
     border: none;
     padding-top: 10px;
     padding-bottom: 10px;
+    background-color: transparent;
+    flex-shrink: 0;
 }
 
 .wrapper-btn-menu {
@@ -58,9 +60,9 @@ img {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    transform: translateX(-49%);
-    /* transform: translateX(-39%); */
-    z-index: 2;
+    transform: translateX(0%);
+    max-width: 60px;
+    background-color: rgba(60, 52, 52, 0.511);
 }
 .overlay-list {
     position:absolute; top:0; left:0;
@@ -79,7 +81,7 @@ img {
     padding-left: 40px;
     padding-right: 40px;
     z-index: 1;
-    transition: 0.5s;
+    /* transition: 0.5s; */
 }
 .overlay-cell {
   position: relative;
@@ -100,9 +102,12 @@ img {
       transform: rotate(45deg);
       display: inline-block;
     }
-    .overlay-link:hover .overlay-link:focus {
+    .overlay-link:hover, .overlay-link:focus {
       color: orange;
     } 
-    .open-btn:hover .overlay-list, .open-btn:focus .overlay-list {
+    .wrapper-btn-menu:hover + .open-btn {
+      opacity: 0;
+    }
+  .wrapper-btn-menu:hover + .overlay-list {
   transform: translateX(0%);
 }
