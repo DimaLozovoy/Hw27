@@ -81,7 +81,7 @@ img {
     padding-left: 40px;
     padding-right: 40px;
     z-index: 1;
-    /* transition: 0.5s; */
+    transition: 0.5s;
 }
 .overlay-cell {
   position: relative;
@@ -108,6 +108,6 @@ img {
     .wrapper-btn-menu:hover + .open-btn {
       opacity: 0;
     }
-  .wrapper-btn-menu:hover + .overlay-list {
+.wrapper-btn-menu:hover + .overlay-list, .overlay-list:hover {
   transform: translateX(0%);
 }
